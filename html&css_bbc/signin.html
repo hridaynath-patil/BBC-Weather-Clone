@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in - BBC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: #000; margin: 0; padding: 0;">
+  <!-- Sign In Container -->
+  <div class="signin-overlay" id="signinOverlay" style="position: static; min-height: 100vh;">
+    <div class="signin-main-bg">
+      <div class="signin-logo-tab">
+        <div class="logo">
+          <span>B</span><span>B</span><span>C</span>
+        </div>
+      </div>
+      
+      <a href="index.html" class="signin-close-btn" id="closeSigninBtn" style="text-decoration: none;" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="square">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </a>
+
+      <div class="signin-content-inner">
+        <h2>Enter your email address to sign in or create an account</h2>
+        
+        <div class="signin-form" id="signinForm">
+          <label>Email</label>
+          <input type="email" id="emailInput" />
+          
+          <div class="error-msg-container" id="emailError" style="display: none;">
+            <div class="error-arrow"></div>
+            <div class="error-box">
+              <svg viewBox="0 0 32 32" width="16" height="16" class="error-icon"><path d="M16 4 L28 26 L4 26 z" fill="none" stroke="white" stroke-width="3"/><line x1="16" y1="12" x2="16" y2="18" stroke="white" stroke-width="3"/><circle cx="16" cy="22" r="1.5" fill="white"/></svg>
+              <span>Enter your email</span>
+            </div>
+          </div>
+
+          <button class="continue-btn" id="continueBtn">Continue</button>
+        </div>
+        
+        <a href="#" class="help-link">Get help signing in</a>
+      </div>
+
+      <div class="signin-footer">
+        <a href="#" class="signin-footer-top-link">Find out more about BBC accounts</a>
+        <hr>
+        <div class="signin-footer-links">
+          <a href="#">Terms of Use</a>
+          <a href="#">About the BBC</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookies</a>
+          <a href="#">Accessibility Help</a>
+          <a href="#">Parental Guidance</a>
+          <a href="#">Contact the BBC</a>
+          <a href="#">Get Personalised Newsletters</a>
+        </div>
+        <p>Copyright &copy; 2026 BBC. The BBC is not responsible for the content of external sites. <a href="#">Read about our approach to external linking.</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Form elements
+    const continueBtn = document.getElementById('continueBtn');
+    const emailInput = document.getElementById('emailInput');
+    const emailError = document.getElementById('emailError');
+    
+    if (continueBtn && emailInput && emailError) {
+      continueBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (!emailInput.value.trim()) {
+          // Show error
+          emailInput.classList.add('has-error');
+          emailError.style.display = 'block';
+        } else {
+          // Hide error (simulate proceed)
+          emailInput.classList.remove('has-error');
+          emailError.style.display = 'none';
+        }
+      });
+    }
+    
+    // Remove error when user types
+    if (emailInput && emailError) {
+      emailInput.addEventListener('input', () => {
+        if (emailInput.value.trim()) {
+          emailInput.classList.remove('has-error');
+          emailError.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

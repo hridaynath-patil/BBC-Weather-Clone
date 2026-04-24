@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BBC Sport Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sport.css">
+</head>
+<body>
+  <header class="header">
+    <!-- TOP NAV -->
+    <div class="top-nav">
+      <div class="container">
+        <!-- LEFT -->
+        <div class="left">
+          <div class="logo">
+            <span>B</span><span>B</span><span>C</span>
+          </div>
+          <a href="signin.html" class="signin" style="text-decoration: none; color: inherit;">
+            <div class="user-icon"></div>
+            <span>Sign in</span>
+          </a>
+          <div class="divider"></div>
+        </div>
+
+        <!-- CENTER NAV -->
+        <ul class="nav">
+          <li><a href="index.html" style="text-decoration: none; color: inherit;">Home</a></li>
+          <li>News</li>
+          <li><a href="sport.html" style="text-decoration: none; color: inherit; border-bottom: 4px solid #ffd230; padding-bottom: 15px;">Sport</a></li>
+          <li>Business</li>
+          <li>Technology</li>
+          <li>Health</li>
+          <li>Culture</li>
+        </ul>
+
+        <!-- RIGHT -->
+        <div class="right">
+          <span class="dots">•••</span>
+          <span class="search-icon">
+            <svg class="orbit-search-button-icon-only" width="28" height="29">
+              <path d="M11,-0.0001 C17.0751322,-0.0001 22,4.92476775 22,10.9999 C22,13.5276632 21.1473793,15.8562862 19.7140404,17.7138664 L28,26 L25,29 L16.518046,20.5178339 C14.8960209,21.4602385 13.0110328,21.9999 11,21.9999 C4.92486775,21.9999 0,17.0750322 0,10.9999 C0,4.92476775 4.92486775,-0.0001 11,-0.0001 Z M11,2.5 C6.30557963,2.5 2.5,6.30557963 2.5,11 C2.5,15.6944204 6.30557963,19.5 11,19.5 C15.6944204,19.5 19.5,15.6944204 19.5,11 C19.5,6.30557963 15.6944204,2.5 11,2.5 Z"></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="sport-main">
+    <!-- SPORT HEADER -->
+    <div class="sport-header-bar">
+      <div class="container">
+        <h1>SPORT</h1>
+      </div>
+    </div>
+    
+    <!-- SPORT NAV -->
+    <div class="sport-nav-bar">
+      <div class="container sport-nav-flex">
+        <ul class="sport-categories">
+          <li>Home</li>
+          <li>Football</li>
+          <li>Cricket</li>
+          <li>Formula 1</li>
+          <li>Rugby U</li>
+          <li>Tennis</li>
+          <li>Golf</li>
+          <li>Cycling</li>
+          <li>Athletics</li>
+        </ul>
+        <div class="sport-more">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <span>More</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLACK SUB NAV -->
+    <div class="sport-sub-nav">
+      <div class="container">
+        <ul class="sport-sub-categories">
+          <li class="active">Home <span class="arrow">></span></li>
+          <li>Premier League |</li>
+          <li>World Snooker |</li>
+          <li>Women's Six Nations</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SPORT CONTENT -->
+    <div class="sport-content-wrapper container">
+      <!-- TOP AD -->
+      <div class="sport-top-ad">
+        <div class="ad-label">ADVERTISEMENT</div>
+        <img src="ad_banner.png" alt="Advertisement" class="ad-full-width">
+      </div>
+
+      <div class="sport-grid">
+        <!-- Main News -->
+        <div class="sport-main-news">
+          <img src="https://ichef.bbci.co.uk/news/1024/branded_sport/438F/production/_133177721_lamine_yamal_getty.jpg" alt="Lamine Yamal" style="width: 100%; height: auto;">
+          <h2>Lamine Yamal season over but Spain star should make World Cup</h2>
+          <p class="sport-category">European Football &middot; 15h</p>
+        </div>
+        
+        <!-- Right Sidebar Ad -->
+        <div class="sport-sidebar-ad">
+          <div class="ad-label">ADVERTISEMENT</div>
+          <div class="ad-citi-placeholder">
+            <img src="https://via.placeholder.com/300x250/0f4c9c/ffffff?text=Citi+Ad" alt="Citi Ad">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

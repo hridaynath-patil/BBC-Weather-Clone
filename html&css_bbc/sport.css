@@ -1,0 +1,159 @@
+/* SPORT PAGE STYLES */
+.sport-main {
+  background: #fff;
+  min-height: 100vh;
+}
+
+.sport-header-bar {
+  background: #FFD230;
+  padding: 10px 0;
+}
+
+.sport-header-bar h1 {
+  font-size: 36px;
+  color: #000;
+  font-weight: 800;
+  margin-left: 100px;
+}
+
+.sport-nav-bar {
+  background: #FFD230;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 0;
+}
+
+.sport-nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 150px;
+}
+
+.sport-categories {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-weight: 500;
+  padding: 12px 0;
+  color: #111;
+}
+
+.sport-categories li {
+  cursor: pointer;
+}
+
+.sport-categories li:hover {
+  text-decoration: underline;
+}
+
+.sport-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-left: 1px solid rgba(0,0,0,0.1);
+  margin-right: 150px;
+}
+
+.sport-sub-nav {
+  background: #000;
+  color: #fff;
+  padding: 12px 0;
+}
+
+.sport-sub-categories {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  font-size: 14px;
+  margin-left: 100px;
+}
+
+.sport-sub-categories li {
+  cursor: pointer;
+}
+
+.sport-sub-categories li.active {
+  font-weight: bold;
+}
+
+.sport-sub-categories li.active .arrow {
+  color: #FFD230;
+  margin-left: 4px;
+}
+
+.sport-sub-categories li:hover {
+  text-decoration: underline;
+}
+
+/* CONTENT */
+.sport-content-wrapper {
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+
+.sport-top-ad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.ad-label {
+  font-size: 11px;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  text-align: right;
+  width: 100%;
+  max-width: 728px;
+}
+
+.ad-full-width {
+  max-width: 728px;
+  width: 100%;
+  background: #eee;
+}
+
+.sport-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 40px;
+  margin-left: 100px;
+  margin-right: 150px;
+}
+
+.sport-main-news h2 {
+  font-size: 26px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #222;
+}
+
+.sport-category {
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.sport-sidebar-ad {
+  display: flex;
+  flex-direction: column;
+}
+
+.sport-sidebar-ad .ad-label {
+  text-align: right;
+  width: 100%;
+}
+
+.ad-citi-placeholder img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  margin-left: auto;
+  display: block;
+}
