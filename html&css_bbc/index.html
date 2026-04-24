@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BBC Weather Clone</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="signin.css">
 </head>
 
 <body>
 
-  <header class="header">
-
-    <!-- TOP NAV -->
-    <div class="top-nav">
+  <!-- TOP NAV -->
+  <nav class="top-nav">
       <div class="container">
 
         <!-- LEFT -->
@@ -22,7 +21,7 @@
             <span>B</span><span>B</span><span>C</span>
           </div>
 
-          <a href="signin.html" class="signin" style="text-decoration: none; color: inherit;">
+          <a href="signin.html" class="signin">
             <div class="user-icon"></div>
             <span>Sign in</span>
           </a>
@@ -32,9 +31,9 @@
 
         <!-- CENTER NAV -->
         <ul class="nav">
-          <li><a href="index.html" style="text-decoration: none; color: inherit;">Home</a></li>
-          <li>News</li>
-          <li><a href="sport.html" style="text-decoration: none; color: inherit;">Sport</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="sport.html">Sport</a></li>
           <li>Business</li>
           <li>Technology</li>
           <li>Health</li>
@@ -54,10 +53,10 @@
         </div>
 
       </div>
-    </div>
+    </nav>
 
     <!-- WEATHER BAR -->
-    <div class="weather-bar">
+    <header class="weather-bar">
       <div class="container">
         <h1>WEATHER</h1>
 
@@ -73,9 +72,7 @@
 
         </div>
       </div>
-    </div>
-
-  </header>
+    </header>
 
   <main id="main-content">
     <!-- Main content will be dynamically loaded here from main.html -->
