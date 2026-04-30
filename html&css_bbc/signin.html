@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign in - BBC</title>
+  <title>BBC - Signin - Identifier</title>
+    <link rel="icon" href="https://static.files.bbci.co.uk/bbcdotcom/web/20260427-074339-4d487e3684-web-3.2.0-4/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="signin.css">
 </head>
@@ -29,7 +30,7 @@
         
         <div class="signin-form" id="signinForm">
           <label>Email</label>
-          <input type="email" id="emailInput" />
+          <input type="text" inputmode="email" autocomplete="email" spellcheck="false" id="emailInput" />
           
           <div class="error-msg-container" id="emailError" style="display: none;">
             <div class="error-arrow"></div>
@@ -68,12 +69,21 @@
     const continueBtn = document.getElementById('continueBtn');
     const emailInput = document.getElementById('emailInput');
     const emailError = document.getElementById('emailError');
+    const errorText = document.querySelector('#emailError .error-box span');
     
-    if (continueBtn && emailInput && emailError) {
+    if (continueBtn && emailInput && emailError && errorText) {
       continueBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        if (!emailInput.value.trim()) {
-          // Show error
+        const emailVal = emailInput.value.trim();
+        
+        if (!emailVal) {
+          // Empty email error
+          errorText.innerHTML = 'Enter your email';
+          emailInput.classList.add('has-error');
+          emailError.style.display = 'block';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+          // Invalid email error
+          errorText.innerHTML = 'Enter your email, for example<br>first.lastname@website.com';
           emailInput.classList.add('has-error');
           emailError.style.display = 'block';
         } else {
@@ -87,10 +97,8 @@
     // Remove error when user types
     if (emailInput && emailError) {
       emailInput.addEventListener('input', () => {
-        if (emailInput.value.trim()) {
-          emailInput.classList.remove('has-error');
-          emailError.style.display = 'none';
-        }
+        emailInput.classList.remove('has-error');
+        emailError.style.display = 'none';
       });
     }
   </script>

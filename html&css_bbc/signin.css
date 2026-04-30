@@ -126,13 +126,19 @@
 
 .error-box {
   background-color: #e0004f;
-  padding: 10px 15px;
+  padding: 12px 15px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   color: #fff;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.error-box svg {
+  margin-top: 3px;
+  flex-shrink: 0;
 }
 
 .signin-form .continue-btn {

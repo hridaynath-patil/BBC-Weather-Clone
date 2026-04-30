@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BBC Weather Clone</title>
+  <title>BBC Weather - Home</title>
+  <link rel="icon" href="https://static.files.bbci.co.uk/core/website/assets/static/icons/apple-touch/weather/apple-touch-icon-114x114-precomposed.5bb861a3ea329321c8e0.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="signin.css">
 </head>
 
 <body>
 
-  <!-- TOP NAV -->
   <nav class="top-nav">
       <div class="container">
 
-        <!-- LEFT -->
+
         <div class="left">
           <div class="logo">
             <span>B</span><span>B</span><span>C</span>
@@ -29,7 +29,7 @@
           <div class="divider"></div>
         </div>
 
-        <!-- CENTER NAV -->
+
         <ul class="nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="news.html">News</a></li>
@@ -40,9 +40,9 @@
           <li>Culture</li>
         </ul>
 
-        <!-- RIGHT -->
         <div class="right">
-          <span class="dots">•••</span>
+          <span class="hamburger-icon" style="display: none; font-size: 28px; font-weight: bold; cursor: pointer;">≡</span>
+          <span class="dots" style="cursor: pointer;">•••</span>
           <span class="search-icon">
             <svg class="orbit-search-button-icon-only" width="28" height="29">
               <path
@@ -53,9 +53,39 @@
         </div>
 
       </div>
+
+      <!-- EXPANDED NAV MENU -->
+      <div class="expanded-nav" id="expandedNav">
+        <div class="container">
+          <ul class="expanded-list desktop-list">
+            <li>Arts</li>
+            <li>Travel</li>
+            <li>Earth</li>
+            <li>Audio</li>
+            <li>Video</li>
+            <li>Live</li>
+          </ul>
+          <ul class="expanded-list mobile-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="sport.html">Sport</a></li>
+            <li>Business</li>
+            <li>Technology</li>
+            <li>Health</li>
+            <li>Culture</li>
+            <li>Arts</li>
+            <li>Travel</li>
+            <li>Earth</li>
+            <li>Audio</li>
+            <li>Video</li>
+            <li>Live</li>
+          </ul>
+          <div class="close-btn" id="closeExpandedNav">✕</div>
+        </div>
+      </div>
     </nav>
 
-    <!-- WEATHER BAR -->
+
     <header class="weather-bar">
       <div class="container">
         <h1>WEATHER</h1>
@@ -75,11 +105,23 @@
     </header>
 
   <main id="main-content">
-    <!-- Main content will be dynamically loaded here from main.html -->
+
   </main>
 
   <script>
-    // Dynamically load the main section
+    const dotsBtn = document.querySelector('.dots');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const closeExpandedBtn = document.getElementById('closeExpandedNav');
+    const expandedNav = document.getElementById('expandedNav');
+
+    function toggleNav() {
+      expandedNav.classList.toggle('active');
+    }
+
+    if (dotsBtn) dotsBtn.addEventListener('click', toggleNav);
+    if (hamburgerIcon) hamburgerIcon.addEventListener('click', toggleNav);
+    if (closeExpandedBtn) closeExpandedBtn.addEventListener('click', toggleNav);
+
     fetch('main.html')
       .then(response => {
         if (!response.ok) throw new Error('Failed to load main.html');
@@ -87,14 +129,11 @@
       })
       .then(data => {
         document.getElementById('main-content').innerHTML = data;
-      })
-      .catch(error => {
-        console.error('Error loading main section:', error);
-        document.getElementById('main-content').innerHTML = '<p style="text-align:center; padding: 20px; color: #fff;">Could not load content. Please ensure you are running a local server (like Live Server).</p>';
       });
+      
   </script>
 
-  <!-- Sign In page has been moved to signin.html -->
+
 
 </body>
 

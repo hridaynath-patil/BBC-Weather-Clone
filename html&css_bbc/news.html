@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BBC News Clone</title>
+  <title>BBC News - Breaking news, video and the latest top stories from the U.S. and around the world</title>
+  <link rel="icon" href="https://static.files.bbci.co.uk/bbcdotcom/web/20260427-074339-4d487e3684-web-3.2.0-4/apple-touch-icon.png">
   <link rel="stylesheet" href="news.css">
 </head>
 <body>
   <header class="news-header">
     <div class="news-top-bar">
       <div class="news-left-icons">
-        <span class="hamburger">≡</span>
-        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
+        <span class="hamburger">
+          <svg width="40" height="24" viewBox="0 0 80 48" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M66.8517 32.0842C68.5359 29.8276 69.5329 27.0282 69.5329 23.996C69.5329 16.5202 63.4727 10.46 55.9969 10.46C48.5212 10.46 42.4609 16.5202 42.4609 23.996C42.4609 31.4717 48.5212 37.532 55.9969 37.532C58.9975 37.532 61.77 36.5557 64.0141 34.9034L69.0904 39.9796L71.9188 37.1512L66.8517 32.0842ZM63.1568 30.3569C64.6606 28.6654 65.5741 26.4374 65.5741 23.996C65.5741 18.7066 61.2863 14.4188 55.9969 14.4188C50.7076 14.4188 46.4197 18.7066 46.4197 23.996C46.4197 29.2853 50.7076 33.5732 55.9969 33.5732C58.4383 33.5732 60.6664 32.6597 62.3579 31.1558L63.1568 30.3569Z" fill="currentColor"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M35.7184 33.6973H10.0254V37.6973H38.0738C37.1617 36.4525 36.3708 35.1133 35.7184 33.6973Z" fill="currentColor"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.6848 21.998H10.0273V25.998H33.6845C33.6283 25.3394 33.5996 24.673 33.5996 23.9998C33.5996 23.3254 33.6284 22.6578 33.6848 21.998Z" fill="currentColor"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M38.0747 10.2998H10.0273V14.2998H35.7186C36.3712 12.8837 37.1624 11.5446 38.0747 10.2998Z" fill="currentColor"></path>
+          </svg>
+        </span>
+        <span class="hamburger-close" style="display: none; font-size: 24px; cursor: pointer; font-weight: bold;">✕</span>
       </div>
       
       <div class="news-logo">
@@ -56,13 +61,38 @@
       <li>BBC InDepth</li>
       <li>BBC Verify</li>
     </ul>
+
+    <!-- Hamburger Menu Drawer -->
+    <div class="hamburger-menu">
+      <div class="hamburger-search">
+        <input type="text" placeholder="Search news, topics and more">
+        <button>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="hamburger-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="news.html">News <span class="chevron"></span></a></li>
+        <li><a href="sport.html">Sport</a></li>
+        <li><a href="#">Business <span class="chevron"></span></a></li>
+        <li><a href="#">Technology <span class="chevron"></span></a></li>
+        <li><a href="#">Health</a></li>
+        <li><a href="#">Culture <span class="chevron"></span></a></li>
+        <li><a href="#">Arts <span class="chevron"></span></a></li>
+        <li><a href="#">Travel <span class="chevron"></span></a></li>
+        <li><a href="#">Earth <span class="chevron"></span></a></li>
+      </ul>
+    </div>
   </header>
 
   <main class="news-main">
     <div class="news-grid">
       <!-- Col 1 -->
       <div class="news-card">
-        <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/674f/live/821f0080-0081-11ef-a15f-c7c4c3482701.jpg" alt="Epstein">
+        <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/c50b/live/f5be4960-42ad-11f1-ac78-2112837ce2aa.jpg.webp" alt="Epstein">
         <h3>Epstein housed abuse victims in London flats, BBC reveals</h3>
         <p>The revelations intensify concerns about repeated police decisions not to investigate 2015 trafficking claims.</p>
         <div class="news-meta">4 hrs ago | UK</div>
@@ -70,7 +100,7 @@
 
       <!-- Col 2 -->
       <div class="news-card">
-        <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/812f/live/98870100-0199-11ef-a15f-c7c4c3482701.jpg" alt="Maduro">
+        <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/c50b/live/f5be4960-42ad-11f1-ac78-2112837ce2aa.jpg.webp" alt="Maduro">
         <h3>US soldier charged after winning $400,000 betting on removal of Maduro</h3>
         <p>Gannon Ken Van Dyke allegedly made trades on Polymarket on the basis of classified information, the justice department says.</p>
         <div class="news-meta">9 hrs ago | US & Canada</div>
@@ -78,7 +108,7 @@
 
       <!-- Col 3 -->
       <div class="news-card">
-        <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/2162/live/95bbcd00-019a-11ef-93a0-779cdb84fbc9.jpg" alt="Trump">
+        <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/c50b/live/f5be4960-42ad-11f1-ac78-2112837ce2aa.jpg.webp" alt="Trump">
         <h3>India condemns remarks shared by Trump calling it a 'hellhole'</h3>
         <p>Trump shared a transcript of remarks made by podcaster Mark Savage, who criticised birthright citizenship in the US.</p>
         <div class="news-meta">2 hrs ago | World</div>
@@ -86,7 +116,7 @@
 
       <!-- Col 4 -->
       <div class="news-card">
-        <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/98f1/live/88e1bb30-019c-11ef-9b4e-e14b22c7eb16.jpg" alt="Outback">
+        <img src="https://ichef.bbci.co.uk/news/480/cpsprodpb/c50b/live/f5be4960-42ad-11f1-ac78-2112837ce2aa.jpg.webp" alt="Outback">
         <h3>Woman trapped in poo for three hours after outback toilet collapses</h3>
         <p>The woman got stuck waist-deep in a pit latrine in the Australian outback after it gave way.</p>
         <div class="news-meta">16 mins ago | World</div>
@@ -105,9 +135,27 @@
           <p>Sherpas cannot prepare the route to the world's highest peak because a huge block of ice is in the way.</p>
           <div class="stacked-meta no-border">16 hrs ago | Asia</div>
         </div>
-      </div>
+      </div> 
 
     </div>
   </main>
+
+  <script>
+    const hamburgerBtn = document.querySelector('.hamburger');
+    const closeBtn = document.querySelector('.hamburger-close');
+    const menu = document.querySelector('.hamburger-menu');
+
+    hamburgerBtn.addEventListener('click', () => {
+      menu.classList.add('active');
+      hamburgerBtn.style.display = 'none';
+      closeBtn.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      menu.classList.remove('active');
+      closeBtn.style.display = 'none';
+      hamburgerBtn.style.display = '';
+    });
+  </script>
 </body>
 </html>
