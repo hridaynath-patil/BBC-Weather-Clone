@@ -71,7 +71,7 @@ body {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 0.2px;
+  gap: 0.1px;
   margin: 0;
   padding: 15px 0 0 0;
   font-weight: bold;
@@ -82,6 +82,7 @@ body {
 .news-nav li {
   padding-bottom: 15px;
   margin-right: 0.1px;
+  gap: 0.1px;
 }
 
 .news-nav a {
@@ -106,7 +107,7 @@ body {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 0.2px;
+  gap: 0.1px;
   margin: 0;
   padding: 11px 0;
   font-size: 14px;
@@ -120,6 +121,7 @@ body {
   transition: background 0.2s;
   padding-bottom: 1px;
   margin-right: 0.1px;
+  gap: 0.1px;
 }
 
 .news-subnav li:hover {
